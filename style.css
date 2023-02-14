@@ -99,6 +99,12 @@ nav {
   z-index: 99;
 }
 
+.window-scrolled {
+  background: var(--color-bg-2);
+  border-bottom: 0.2rem solid var(--color-bg-3);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
 .nav__container {
   height: 100%;
   display: flex;
@@ -111,7 +117,7 @@ nav {
 }
 
 .nav__logo {
-  width: 7.5rem;
+  width: 4rem;
 }
 
 .nav__links {
