@@ -156,8 +156,8 @@ header {
 
 .header__container {
   display: grid;
-  grid-template-columns: 40% 50%;
-  gap: 10%;
+  grid-template-columns: 42% 56%;
+  gap: 2%;
   margin-top: 10rem;
   position: relative;
 }
@@ -169,10 +169,131 @@ header {
   position: absolute;
 }
 
-
 .header__image-lg {
   width: 29rem;
   position: relative;
   top: 1rem;
   left: 1rem;
+  filter: saturate(0) brightness(0.3);
+  transition: var(--transition);
+}
+
+.header__image-sm {
+  width: 28rem;
+  height: 28rem;
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.header__left:hover .header__image-sm {
+  opacity: 0;
+}
+
+.header__left:hover .header__image-lg {
+  filter: saturate(1) brightness(1);
+  border: 1rem solid var(--color-bg-4);
+  top: 0;
+  left: 0;
+}
+
+.header__head {
+  display: flex;
+  gap: 2rem;
+}
+
+/* EMPTY STYLE */
+.empty {
+  height: 3.5rem;
+  width: 18rem;
+  background: var(--color-bg-2);
+  border-radius: calc(1.5rem / 2);
+  margin-bottom: 3.5rem;
+  box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-bg-4);
+}
+
+.header__tag {
+  color: var(--color-primary-variant);
+}
+
+.header__right p {
+  margin-top: 2rem;
+  width: 85%;
+}
+
+/* ONLY SHOW ON TABLETS AND PHONES */
+.header__btn-md {
+  display: none;
+}
+
+.header__frames {
+  position: absolute;
+  top: 88vh;
+  right: calc(100vw/2);
+  transition: var(--transition);
+}
+
+.header__frame {
+  width: 14rem;
+  position: absolute;
+  transform: rotate(-15deg);
+  transform-origin: bottom left;
+  transition: var(--transition);
+}
+
+.header__frame:nth-child(2) {
+  transform: rotate(15deg);
+  top: -2rem;
+  left: 2rem;
+}
+
+.header__frames:hover .header__frame {
+  transform: rotate(0);
+}
+
+.header__frames:hover .header__frame:nth-child(2) {
+  top: 0;
+  left: 15rem;
+}
+
+/* GENERAL STYLE FOR CONTACT BUTTON */
+
+.contact__btn {
+  color: var(--color-bg-1);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  display: grid;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.header__btn {
+  background: linear-gradient(-30deg, var(--color-primary-variant), var(--color-primary), var(--color-primary-variant));
+  position: absolute;
+  right: 6%;
+  bottom: -3rem;
+}
+
+.header__btn:hover {
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-1rem);
+  color: var(--color-bg-1);
+}
+
+.contact__btn i {
+  font-size: 3.5rem;
+  position: absolute;
+}
+
+.contact__btn p {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 10rem;
+  height: 10rem;
 }
