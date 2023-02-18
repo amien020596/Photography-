@@ -11,3 +11,25 @@ textButtons.forEach(textButton => {
 
   text.innerHTML = text.innerHTML.split('').map((character, index) => `<span style="transform:rotate(${index * 12}deg)">${character}</span>`).join('')
 })
+
+// Swipper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    599: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1023: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  }
+});
+
